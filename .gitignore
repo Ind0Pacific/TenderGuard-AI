@@ -11,6 +11,8 @@ __pycache__/
 *$py.class
 *.so
 .Python
+python_runtime/
+bin/
 backend/env/
 backend/venv/
 backend/.venv/

@@ -1,7 +1,9 @@
 @echo off
 title TenderGuard AI - Master Launcher
 echo ===============================================================
-echo Launching TenderGuard AI (FastAPI Backend + Next.js Frontend)...
+echo Launching TenderGuard AI from E:\TenderGuard-AI
+echo - Dedicated Python Runtime: E:\TenderGuard-AI\python_runtime
+echo - Next.js Frontend:         E:\TenderGuard-AI\frontend
 echo ===============================================================
 
 start "TenderGuard AI Backend" "%~dp0start_backend.bat"
