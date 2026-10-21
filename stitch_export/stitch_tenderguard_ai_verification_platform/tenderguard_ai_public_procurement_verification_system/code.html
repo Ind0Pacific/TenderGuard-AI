@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "outline": "#727876", "surface-dim": "#d6dbdd", "surface-variant": "#dee3e5", "surface-bright": "#f5fafc", "on-tertiary": "#ffffff", "outline-variant": "#c2c8c5", "secondary-fixed": "#bfeaee", "tertiary-fixed": "#c6e9e8", "secondary-container": "#bfeaee", "on-secondary-fixed-variant": "#244d50", "surface-tint": "#51625e", "on-primary-fixed": "#0e1e1c", "on-error": "#ffffff", "on-primary-fixed-variant": "#3a4a46", "on-tertiary-fixed-variant": "#2c4c4b", "primary-fixed": "#d4e6e1", "surface-container": "#eaeff1", "surface-container-high": "#e4e9eb", "surface": "#f5fafc", "surface-container-low": "#eff4f6", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#ecf1f3", "surface-container-highest": "#dee3e5", "on-primary": "#ffffff", "secondary": "#3c6568", "primary-fixed-dim": "#b8cac5", "primary-container": "#162623", "on-background": "#171c1e", "on-secondary": "#ffffff", "on-secondary-container": "#436b6e", "background": "#f5fafc", "tertiary-container": "#032827", "on-secondary-fixed": "#002022", "on-surface-variant": "#424846", "on-error-container": "#93000a", "on-primary-container": "#7c8e8a", "tertiary": "#001010", "error": "#ba1a1a", "on-surface": "#171c1e", "inverse-primary": "#b8cac5", "inverse-surface": "#2c3133", "on-tertiary-container": "#6f918f", "on-tertiary-fixed": "#00201f", "tertiary-fixed-dim": "#aacdcc", "secondary-fixed-dim": "#a4ced1", "primary": "#02100d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "space-md": "1rem", "gutter": "1.5rem", "margin-sm": "1.25rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-sm": ["Manrope"], "headline-xl-mobile": ["Manrope"], "body-lg": ["Manrope"], "headline-md": ["Manrope"], "label-sm": ["Space Grotesk"], "body-md": ["Manrope"], "headline-xl": ["Manrope"], "display-lg-mobile": ["Manrope"], "display-lg": ["Manrope"], "label-lg": ["Space Grotesk"], "body-sm": ["Manrope"], "label-md": ["Space Grotesk"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="TenderGuard AI Shield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UIL6dyGJMDCLXOgBaBSnMGq4k4RnnGC6p_BbdBKu1vK4KmiqqwGD5nrdTYDR7KIM0H2XMempb9l-PMdeLmypQH6krbY7z_qtOgxGUoU-5vy-thXR9-04PdcJ-UyS48FESnzrdjLKS0hgzwbIYxZcdUyLmdPH2G76URDnQHRV8Fe4uVgdZVGaOkxhzM1cTAINDo3Q21gL9pCxDgUo6HjWMDp8FmadU9G1fayEdtdxjE3IY0KPuOrdk2fK4"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary">TenderGuard AI</span></div><span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Zero-Storage RAM Security</span><div class="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>Ephemeral RAM Session: Active</div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg shadow-sm"><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-semibold rounded-lg shadow-sm" data-path="live-verification-workspace" href="#">Live Verification Workspace</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="case-benchmarks" href="#">Case Benchmarks</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="ram-and-hash-audit-logs" href="#">RAM &amp; Hash Audit Logs</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="industry-presets" href="#">Industry Presets</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex flex-col items-end"><span class="font-label-md text-label-md font-semibold text-on-surface">Auditor #4092</span><span class="font-label-sm text-label-sm text-secondary font-medium">SHA-256 Hash Mode</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-8 w-full bg-surface-container-low px-margin flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[16px]">shield</span><span>Privacy Shield Active: Zero Document Disk Persistence. All files processed purely in volatile RAM and purged post-hashing.</span></div><div class="hidden md:flex items-center gap-space-md"><span class="font-medium text-secondary">RAM Buffer Integrity: 100% Isolated</span><span class="text-outline">|</span><span>Enclave SHA-256 Verifier v4.2.1</span></div></div></header><main class="w-full pt-28 bg-background"><div class="flex flex-col w-full">
+<!-- Top Privacy Architecture Bar & Real-Time Ephemeral Telemetry -->
+<section class="w-full px-margin py-space-sm bg-surface-container-low shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-sm">
+<div class="flex items-start lg:items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0 mt-0.5 lg:mt-0">lock_reset</span>
+<div class="flex flex-col sm:flex-row sm:items-center gap-x-space-sm">
+<span class="font-label-md text-label-md font-semibold text-primary">Zero-Disk RAM Execution Protocol:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Uploaded PAN, Aadhaar &amp; licenses are parsed purely in volatile cache; physical bytes purged immediately post SHA-256 fingerprinting.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Buffer: <strong class="text-primary font-semibold">0.00 KB</strong></span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest">
+<span class="material-symbols-outlined text-[15px] text-secondary">fingerprint</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hashes Minted: <strong class="text-primary font-semibold">14,892</strong></span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold">Purge Assurance: 100%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Vendor Context & Workflow Orchestrator -->
+<section class="w-full px-margin py-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col xl:flex-row xl:items-center xl:justify-between gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center gap-space-lg">
+<div class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[30px]">domain_verification</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-primary">Apex Buildtech Infra Pvt Ltd</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">VEND-2026-8812</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Class-1 PWD Tier</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">gavel</span> Tender Ref: NHAI/CIVIL/2026/PKG-09</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">verified</span> MCA Filings: Active &amp; Good Standing</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">timer</span> Session Timeout: 18m 42s</span>
+</div>
+</div>
+</div>
+<!-- Industry Presets Switcher -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-sm bg-surface-container-low p-1.5 rounded-xl">
+<button class="industry-tab px-4 py-2 rounded-lg font-label-md text-label-md transition-all shadow-sm bg-primary-container text-on-primary flex items-center gap-1.5" id="tab-infra">
+<span class="material-symbols-outlined text-[16px]">apartment</span>
+<span>Construction &amp; Infra</span>
+</button>
+<button class="industry-tab px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1.5" id="tab-elec">
+<span class="material-symbols-outlined text-[16px]">memory</span>
+<span>Electronics &amp; Hardware</span>
+</button>
+<button class="industry-tab px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1.5" id="tab-med">
+<span class="material-symbols-outlined text-[16px]">medical_services</span>
+<span>Medical Supplies</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Verification Split Workspace -->
+<section class="w-full px-margin pb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- LEFT COLUMN: Checklist & Dropzone (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Checklist Header Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">task_alt</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">Required Document Pipeline</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3 of 5 documents cryptographically validated and RAM-purged</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg font-bold text-secondary">60%</span>
+<div class="w-24 h-2.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-3/5 rounded-full transition-all"></div>
+</div>
+</div>
+</div>
+<!-- Document Item 1: PAN Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-fixed-variant flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-lg text-label-lg font-semibold text-primary">Permanent Account Number (PAN)</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">VERIFIED ✓</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">RAM: PURGED</span>
+</div>
+<div class="mt-1.5 grid grid-cols-1 sm:grid-cols-2 gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<div>Extracted ID: <strong class="text-primary font-mono font-medium">ABCDE1234F</strong></div>
+<div>Name Correlation: <strong class="text-primary font-medium">99.8% Match</strong></div>
+<div>AI Vision Filter: <span class="text-secondary font-medium">Degraded Scan Restored</span></div>
+<div>Cryptographic Token: <span class="font-mono text-outline">8f4b...3c12</span></div>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<!-- Document Item 2: Aadhaar Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-fixed-variant flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-lg text-label-lg font-semibold text-primary">Aadhaar (UIDAI Masked Verification)</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">VERIFIED ✓</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">RAM: PURGED</span>
+</div>
+<div class="mt-1.5 grid grid-cols-1 sm:grid-cols-2 gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<div>Masked UID: <strong class="text-primary font-mono font-medium">****-****-9821</strong></div>
+<div>Biometric Hash: <strong class="text-primary font-medium">Match (UIDAI v2)</strong></div>
+<div>Signatory: <span class="text-secondary font-medium">Director #1 (K. Sharma)</span></div>
+<div>Disk Retention: <span class="text-secondary font-semibold font-mono">0 Bytes (Purged)</span></div>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<!-- Document Item 3: GSTIN Certificate -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-fixed-variant flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-lg text-label-lg font-semibold text-primary">Goods &amp; Services Tax (GSTIN)</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">VERIFIED ✓</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">RAM: PURGED</span>
+</div>
+<div class="mt-1.5 grid grid-cols-1 sm:grid-cols-2 gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<div>GSTIN: <strong class="text-primary font-mono font-medium">27AAACA9921D1Z8</strong></div>
+<div>Portal Status: <strong class="text-secondary font-medium">Active (Filed till 2026)</strong></div>
+<div>Jurisdiction: <span class="text-primary font-medium">State Code 27 (MH)</span></div>
+<div>Tax Default Cross-Check: <span class="text-secondary font-medium">Clean Record</span></div>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<!-- Document Item 4: Sector License (Currently Processing) -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm transition-colors">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-secondary text-on-secondary flex items-center justify-center flex-shrink-0 mt-0.5 animate-pulse">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-lg text-label-lg font-semibold text-primary">Class 1 PWD Civil Contractor License</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+                      EXTRACTING OCR
+                    </span>
+</div>
+<div class="mt-1.5 font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">visibility</span>
+<span>AI Vision de-skewing &amp; stamp signature OCR isolation in progress...</span>
+</div>
+</div>
+</div>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high font-label-sm text-label-sm text-primary transition-colors">Inspect</button>
+</div>
+</div>
+<!-- Document Item 5: Awaiting Upload -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-surface-container text-outline flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-lg text-label-lg font-semibold text-primary">Pollution Control &amp; Labor Cess Clearance</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">AWAITING UPLOAD</span>
+</div>
+<div class="mt-1 font-body-sm text-body-sm text-on-surface-variant">
+                  Mandatory environmental consent valid for infrastructure construction zone Package 9.
+                </div>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm hover:bg-secondary transition-colors">Select File</button>
+</div>
+</div>
+<!-- Live Vision Dropzone Station -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">auto_fix_high</span>
+<span class="font-headline-sm text-headline-sm text-primary">Autonomous Vision Ingestion Node</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold uppercase">RAM Mode Active</span>
+</div>
+<!-- Drop Target Area -->
+<div class="p-space-xl rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col items-center justify-center text-center cursor-pointer group" id="dropzone">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform mb-space-sm">
+<span class="material-symbols-outlined text-[32px] text-secondary">cloud_upload</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary">Drag &amp; Drop Tender Documentation</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mt-1">
+              Supports folded, skewed, or degraded photocopies (PDF, TIFF, JPEG). AI Vision Auto-Enhance rectifies noise in ephemeral memory prior to cryptographic hashing.
+            </p>
+<div class="mt-space-md flex items-center gap-space-sm flex-wrap justify-center">
+<button class="px-4 py-2 rounded-lg bg-primary-container hover:bg-secondary text-on-primary font-label-md text-label-md transition-colors shadow-sm">Browse Local Storage</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors">Scan via Hardware Token</button>
+</div>
+</div>
+<!-- Security Footnote -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container rounded-lg font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary">memory_alt</span> Volatile Enclave Buffer Limit: 512 MB</span>
+<span class="font-medium text-secondary">Zero-Log Encryption: ChaCha20-Poly1305</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Document Intelligence & Cryptographic Inspector (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Live Document OCR Preview Inspector -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">document_scanner</span>
+<span class="font-headline-sm text-headline-sm text-primary">Live OCR Inspector</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Bounding Mesh: Active
+            </div>
+</div>
+<!-- Simulated Degraded Scanned Document with Vision Bounding Boxes -->
+<div class="relative w-full rounded-xl bg-surface-container-high overflow-hidden shadow-inner p-space-md flex flex-col gap-space-sm min-h-[320px]">
+<!-- Decorative Scan Texture Overlays -->
+<div class="absolute inset-0 bg-gradient-to-b from-surface-variant/20 via-transparent to-surface-variant/40 pointer-events-none"></div>
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary opacity-75 shadow-[0_0_12px_#3c6568] animate-pulse"></div>
+<!-- Document Visual Container -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm relative z-10 font-mono text-[11px] leading-relaxed text-on-surface-variant select-none">
+<!-- Header of Scanned Doc -->
+<div class="flex items-center justify-between pb-2 border-b border-surface-variant">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-[9px] text-secondary">GOI</div>
+<span class="font-semibold text-primary">INCOME TAX DEPARTMENT - GOVT OF INDIA</span>
+</div>
+<span class="text-[9px] text-outline font-sans">PERMANENT ACCOUNT CARD</span>
+</div>
+<!-- Main Scanned Body with Bounding Boxes -->
+<div class="mt-3 flex gap-space-md items-start">
+<!-- Scanned Photo Placeholders -->
+<div class="flex flex-col items-center gap-1 flex-shrink-0">
+<div class="w-16 h-20 bg-surface-container-high rounded flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[24px]">account_box</span>
+</div>
+<div class="w-16 h-6 bg-surface-container rounded flex items-center justify-center text-[8px] text-outline">
+                    [Signature]
+                  </div>
+</div>
+<!-- Text Bounding Boxes Extracted by AI -->
+<div class="flex-1 flex flex-col gap-2">
+<!-- Name Box -->
+<div class="relative p-1 rounded bg-secondary-container/40">
+<span class="absolute -top-2 right-1 px-1 bg-secondary text-on-secondary rounded text-[8px] font-sans">Holder Name: 99.8%</span>
+<span class="text-[9px] text-outline block">NAME:</span>
+<span class="text-primary font-bold tracking-wider">APEX BUILDTECH INFRA PVT LTD</span>
+</div>
+<!-- ID Box -->
+<div class="relative p-1 rounded bg-secondary-container/40">
+<span class="absolute -top-2 right-1 px-1 bg-secondary text-on-secondary rounded text-[8px] font-sans">PAN ID: Verified</span>
+<span class="text-[9px] text-outline block">NUMBER:</span>
+<span class="text-primary font-bold text-[13px] tracking-widest">ABCDE1234F</span>
+</div>
+<!-- Date & Classification -->
+<div class="grid grid-cols-2 gap-2">
+<div class="p-1 rounded bg-surface-container">
+<span class="text-[9px] text-outline block">INCORPORATION:</span>
+<span class="text-on-surface font-semibold">14/06/2014</span>
+</div>
+<div class="p-1 rounded bg-surface-container">
+<span class="text-[9px] text-outline block">CATEGORY:</span>
+<span class="text-on-surface font-semibold">Private Limited</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Scan Watermark / Noise Simulation -->
+<div class="mt-3 pt-2 border-t border-surface-variant flex items-center justify-between text-[9px] text-outline">
+<span>OCR Engine: TensorVision-v8.4.1</span>
+<span>Noise Filtering: +34dB Cleared</span>
+</div>
+</div>
+<!-- Overlay Diagnostic Tag -->
+<div class="mt-auto flex items-center justify-between z-10 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">tune</span> Skew Angle: +1.4° Corrected
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Micro-print Legibility: High</span>
+</div>
+</div>
+<!-- Cryptographic Audit Node Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">enhanced_encryption</span>
+                Cryptographic Attestation Token
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-medium">SHA-256</span>
+</div>
+<!-- SHA-256 String Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between gap-space-sm">
+<span class="font-mono text-body-sm text-body-sm text-on-surface font-medium truncate">
+                e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+              </span>
+<button class="text-secondary hover:text-primary transition-colors flex-shrink-0" title="Copy Hash">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- Validation Checklist Pills -->
+<div class="grid grid-cols-2 gap-space-xs pt-1 font-label-sm text-label-sm">
+<div class="p-2 rounded bg-surface-container-lowest flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<div class="flex flex-col">
+<span class="text-outline">Expiry Horizon</span>
+<span class="font-semibold text-primary">620 Days (Valid)</span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">shield_person</span>
+<div class="flex flex-col">
+<span class="text-outline">Blacklist Registry</span>
+<span class="font-semibold text-secondary">PASS / 0 Flags</span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">rule</span>
+<div class="flex flex-col">
+<span class="text-outline">MCA Master Data</span>
+<span class="font-semibold text-secondary">Matches Active CIN</span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">delete_sweep</span>
+<div class="flex flex-col">
+<span class="text-outline">Raw Image in Disk</span>
+<span class="font-semibold text-secondary">Zero (Purged)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-xs flex items-center gap-space-sm">
+<button class="flex-1 py-2 rounded-lg bg-primary-container hover:bg-secondary text-on-primary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Affix Auditor Cryptographic Stamp</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary transition-colors" title="Export Attestation JSON">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Benchmark Audit Examples Section -->
+<section class="w-full px-margin pb-space-xl">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Institutional Case Benchmarks</span>
+<h2 class="font-headline-xl text-headline-xl text-primary tracking-tight">Real-World Autonomous Audits</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Live comparison showing autonomous multi-document verification outcomes across compliance thresholds, hard fraud rejections, and edge case routing.
+        </span>
+</div>
+<!-- 3 Benchmark Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-space-sm">
+<!-- Benchmark 1: Full Approval -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                AUTOMATICALLY APPROVED
+              </span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">100%</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">Vanguard ElectroTech Solutions</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CIN: U31900DL2018PTC334192 • Sector: Electronics</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Documents Verified:</span>
+<span class="font-semibold text-primary">6 of 6 Complete</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Regulatory Checks:</span>
+<span class="font-semibold text-secondary">BIS &amp; RoHS Valid</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Expiry Violations:</span>
+<span class="font-semibold text-secondary">0 Violations</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Tax Compliance:</span>
+<span class="font-semibold text-secondary">GSTR-3B Filed (24 Mo)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Full cryptographic handshake achieved. Tender procurement gateway unlocked without human auditor intervention.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Passed 4 mins ago</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors">
+              Inspect Token
+            </button>
+</div>
+</div>
+<!-- Benchmark 2: Hard Reject -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+                HARD REJECTION ✗
+              </span>
+<span class="font-headline-sm text-headline-sm font-bold text-error">32%</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">SwiftLogistics Global Ltd</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CIN: U63090MH2012PLC231804 • Sector: Supply Chain</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">GSTIN Status:</span>
+<span class="font-semibold text-error">Cancelled (Non-Filing)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Labor License:</span>
+<span class="font-semibold text-error">Expired (14 Jan 2024)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">PAN Entity Check:</span>
+<span class="font-semibold text-secondary">Director Hash Match</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">System Action:</span>
+<span class="font-semibold text-error">Bidding Blocked</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Automated tripwire activated. Discrepancy logged directly in Ministry of Corporate Affairs tender exclusion telemetry.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Rejected 18 mins ago</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors">
+              View Rejection Memo
+            </button>
+</div>
+</div>
+<!-- Benchmark 3: Edge Case / Human Escalation -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+                HUMAN ESCALATION
+              </span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">Flagged</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">Horizon Heavy Works LLP</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">LLPIN: AAB-9122 • Sector: Infra &amp; Dredging</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Anomaly Detected:</span>
+<span class="font-semibold text-secondary">Legal Structure Shift</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">PAN Signature:</span>
+<span class="font-semibold text-on-surface">Matches Partnership Firm</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">GSTIN Registered:</span>
+<span class="font-semibold text-on-surface">Matches Converted LLP</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Routing Status:</span>
+<span class="font-semibold text-secondary">Senior Officer Queued</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Entity recently transitioned from traditional partnership to LLP during pending tender. Certificate of Conversion required for clearance.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">In Review (Priority #3)</span>
+<button class="px-3 py-1 rounded bg-primary-container text-on-primary hover:bg-secondary font-label-sm text-label-sm transition-colors">
+              Claim Dossier
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Client-side Script -->
+<script>
+    document.querySelectorAll('.industry-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.industry-tab').forEach(t => {
+          t.classList.remove('bg-primary-container', 'text-on-primary');
+          t.classList.add('text-on-surface-variant');
+        });
+        this.classList.remove('text-on-surface-variant');
+        this.classList.add('bg-primary-container', 'text-on-primary');
+      });
+    });
+
+    const dropzone = document.getElementById('dropzone');
+    if (dropzone) {
+      dropzone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropzone.classList.add('bg-surface-container-highest');
+      });
+      dropzone.addEventListener('dragleave', () => {
+        dropzone.classList.remove('bg-surface-container-highest');
+      });
+      dropzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropzone.classList.remove('bg-surface-container-highest');
+        alert('File ingested into ephemeral volatile RAM. Extracting OCR bounding mesh and computing SHA-256 fingerprint...');
+      });
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest mt-space-xl py-space-lg shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div>© 2025 TenderGuard AI. Autonomous Compliance &amp; Cryptographic RAM Verification Hub.</div><div class="flex items-center gap-space-lg font-label-sm text-label-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Cryptographic Audit Attestation</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="security-protocols" href="#">Zero-Knowledge Principles</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">RAM Isolation Specs</a></div></div></footer></body></html>

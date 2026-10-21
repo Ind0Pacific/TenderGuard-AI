@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.app.config import settings
 from backend.app.models.database import init_db
 from backend.app.services.synthetic_data import get_default_tender, create_synthetic_filings
-from backend.app.routers import tenders, vendors, review, metrics
+from backend.app.routers import tenders, vendors, review, metrics, auth
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -27,6 +27,7 @@ app.include_router(tenders.router, prefix=settings.API_PREFIX)
 app.include_router(vendors.router, prefix=settings.API_PREFIX)
 app.include_router(review.router, prefix=settings.API_PREFIX)
 app.include_router(metrics.router, prefix=settings.API_PREFIX)
+app.include_router(auth.router, prefix=settings.API_PREFIX)
 
 @app.on_event("startup")
 def on_startup():

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#ffdad6", "outline": "#727876", "surface-dim": "#d6dbdd", "surface-variant": "#dee3e5", "surface-bright": "#f5fafc", "on-tertiary": "#ffffff", "outline-variant": "#c2c8c5", "secondary-fixed": "#bfeaee", "tertiary-fixed": "#c6e9e8", "secondary-container": "#bfeaee", "on-secondary-fixed-variant": "#244d50", "surface-tint": "#51625e", "on-primary-fixed": "#0e1e1c", "on-error": "#ffffff", "on-primary-fixed-variant": "#3a4a46", "on-tertiary-fixed-variant": "#2c4c4b", "primary-fixed": "#d4e6e1", "surface-container": "#eaeff1", "surface-container-high": "#e4e9eb", "surface": "#f5fafc", "surface-container-low": "#eff4f6", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#ecf1f3", "surface-container-highest": "#dee3e5", "on-primary": "#ffffff", "secondary": "#3c6568", "primary-fixed-dim": "#b8cac5", "primary-container": "#162623", "on-background": "#171c1e", "on-secondary": "#ffffff", "on-secondary-container": "#436b6e", "background": "#f5fafc", "tertiary-container": "#032827", "on-secondary-fixed": "#002022", "on-surface-variant": "#424846", "on-error-container": "#93000a", "on-primary-container": "#7c8e8a", "tertiary": "#001010", "error": "#ba1a1a", "on-surface": "#171c1e", "inverse-primary": "#b8cac5", "inverse-surface": "#2c3133", "on-tertiary-container": "#6f918f", "on-tertiary-fixed": "#00201f", "tertiary-fixed-dim": "#aacdcc", "secondary-fixed-dim": "#a4ced1", "primary": "#02100d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "space-md": "1rem", "gutter": "1.5rem", "margin-sm": "1.25rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-sm": ["Manrope"], "headline-xl-mobile": ["Manrope"], "body-lg": ["Manrope"], "headline-md": ["Manrope"], "label-sm": ["Space Grotesk"], "body-md": ["Manrope"], "headline-xl": ["Manrope"], "display-lg-mobile": ["Manrope"], "display-lg": ["Manrope"], "label-lg": ["Space Grotesk"], "body-sm": ["Manrope"], "label-md": ["Space Grotesk"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="TenderGuard AI Shield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UIL6dyGJMDCLXOgBaBSnMGq4k4RnnGC6p_BbdBKu1vK4KmiqqwGD5nrdTYDR7KIM0H2XMempb9l-PMdeLmypQH6krbY7z_qtOgxGUoU-5vy-thXR9-04PdcJ-UyS48FESnzrdjLKS0hgzwbIYxZcdUyLmdPH2G76URDnQHRV8Fe4uVgdZVGaOkxhzM1cTAINDo3Q21gL9pCxDgUo6HjWMDp8FmadU9G1fayEdtdxjE3IY0KPuOrdk2fK4"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary">TenderGuard AI</span></div><span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Zero-Storage RAM Security</span><div class="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>Ephemeral RAM Session: Active</div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg shadow-sm"><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="live-verification-workspace" href="#">Live Verification Workspace</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="case-benchmarks" href="#">Case Benchmarks</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="ram-and-hash-audit-logs" href="#">RAM &amp; Hash Audit Logs</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="industry-presets" href="#">Industry Presets</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex flex-col items-end"><span class="font-label-md text-label-md font-semibold text-on-surface">Auditor #4092</span><span class="font-label-sm text-label-sm text-secondary font-medium">SHA-256 Hash Mode</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-8 w-full bg-surface-container-low px-margin flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[16px]">shield</span><span>Privacy Shield Active: Zero Document Disk Persistence. All files processed purely in volatile RAM and purged post-hashing.</span></div><div class="hidden md:flex items-center gap-space-md"><span class="font-medium text-secondary">RAM Buffer Integrity: 100% Isolated</span><span class="text-outline">|</span><span>Enclave SHA-256 Verifier v4.2.1</span></div></div></header><main class="w-full pt-28 bg-background"><div class="flex flex-col w-full">
+<div class="w-full px-margin py-space-lg flex flex-col gap-space-lg max-w-[1600px] mx-auto">
+<!-- Screen Sub-Header & Dynamic Trust Banner -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-secondary mb-1">
+<span>GOVERNANCE &amp; TRUST</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant font-medium">CRYPTOGRAPHIC AUDIT TRAIL</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Cryptographic Audit Ledger &amp; Zero-Storage Proofs</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Mathematically provable audit trails confirming zero-disk persistence. Volatile memory is wiped immediately following SHA-256 state seal.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="flex items-center gap-2 px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Export Merkle (.JSON-LD)</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-space-sm rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg transition-all shadow-md">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Download Witness Cert</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Cards Metric Strip (4 Columns) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1: Disk Footprint -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 rounded-full bg-secondary-container/20 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Disk Footprint</span>
+<span class="p-1.5 rounded-lg bg-secondary-container text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">hard_drive</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-mono">0.00</span>
+<span class="font-label-lg text-label-lg text-secondary font-semibold">Bytes</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Guaranteed Zero-Disk Persistence
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Active Mount: <code class="font-mono text-primary font-semibold">/dev/ramfs0</code></span>
+<span class="text-secondary font-medium">Ephemerality 100%</span>
+</div>
+</div>
+<!-- Metric 2: Enclave Wipe Interval -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 rounded-full bg-secondary-fixed-dim/20 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Active RAM Enclave</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[20px]">memory</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-mono">&lt;850</span>
+<span class="font-label-lg text-label-lg text-secondary font-semibold">ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Isolated Volatile DDR5 ECC Buffer
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Current P99: <span class="font-mono text-primary font-semibold">742ms</span></span>
+<span class="text-secondary font-medium">Auto-Overwritten</span>
+</div>
+</div>
+<!-- Metric 3: SHA-256 Fingerprints Logged -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">SHA-256 Logs</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-mono">14,892</span>
+<span class="font-label-lg text-label-lg text-secondary font-semibold">Hashes</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Immutable Cryptographic Ledger
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Tree Depth: <span class="font-mono text-primary font-semibold">24 Levels</span></span>
+<span class="text-secondary font-medium">Merkle Root Synced</span>
+</div>
+</div>
+<!-- Metric 4: HSM Key Attestation -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">HSM Key Attestation</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[20px]">token</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary tracking-tight font-mono">FIPS 140-3</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">L4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Active ID: #4092-HSM-VAULT
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Witness: <span class="font-mono text-primary font-semibold">GovCloud-AP-1</span></span>
+<span class="text-secondary font-medium">Cert Valid</span>
+</div>
+</div>
+</div>
+<!-- Cryptographic Verifier & Real-Time Search Bar -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Hash Input -->
+<div class="relative flex-1">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-[20px]">key_visualizer</span>
+</div>
+<input class="w-full h-11 pl-11 pr-28 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/60 font-mono font-body-sm text-body-sm outline-none focus:bg-surface transition-all shadow-inner" id="hashSearchInput" placeholder="Paste SHA-256 document fingerprint or Vendor Tender ID (e.g., e3b0c44298fc1c14...)" type="text"/>
+<button class="absolute right-1.5 top-1.5 bottom-1.5 px-3 rounded bg-primary hover:bg-secondary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold flex items-center gap-1 transition-colors" onclick="triggerQuickVerify()">
+<span class="material-symbols-outlined text-[14px]">search_check</span>
+            Verify
+          </button>
+</div>
+<!-- Filter Chips Strip -->
+<div class="flex flex-wrap items-center gap-2">
+<div class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">filter_list</span>
+<span>Status:</span>
+<select class="bg-transparent text-primary font-semibold outline-none cursor-pointer">
+<option>All Verifications</option>
+<option>Approved Only</option>
+<option>Hard Reject</option>
+<option>Escalated</option>
+</select>
+</div>
+<div class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<span>Sector:</span>
+<select class="bg-transparent text-primary font-semibold outline-none cursor-pointer">
+<option>All Sectors</option>
+<option>Electronics</option>
+<option>Logistics</option>
+<option>Infrastructure</option>
+<option>Pharma/Medical</option>
+</select>
+</div>
+<div class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<span>Enclave:</span>
+<select class="bg-transparent text-primary font-semibold outline-none cursor-pointer">
+<option>All Nodes</option>
+<option>SGX-Node-01 (DDR5)</option>
+<option>SGX-Node-02 (DDR5)</option>
+<option>Nitro-Enclave-A</option>
+</select>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" title="Reset Filters">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Quick Hash Proof Status Toast Notification (Interactive Simulation) -->
+<div class="hidden p-space-sm rounded-lg bg-secondary-container/40 flex items-center justify-between text-on-secondary-fixed-variant font-body-sm text-body-sm" id="verifySuccessBadge">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span><strong>Merkle Proof Confirmed:</strong> Leaf matched to Block #1,492,820. RAM state: <span class="font-mono text-primary">ZEROIZED (0x00)</span> with HSM Witness Receipt.</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('verifySuccessBadge').classList.add('hidden')">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Main Cryptographic Ledger Table -->
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header Bar -->
+<div class="px-space-lg py-space-md bg-surface-container-low/50 flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_tree</span>
+<span class="font-headline-sm text-headline-sm text-primary">Immutable Document Records</span>
+<span class="ml-2 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">Live Sync</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary"></span> Auto-polling ledger (5s)</span>
+<span class="font-mono">Block #1,492,824</span>
+</div>
+</div>
+<!-- Responsive Table Grid -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm text-on-surface">
+<thead class="bg-surface-container-low/30 text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<tr>
+<th class="py-space-md px-space-lg font-medium">Timestamp (UTC) / Block</th>
+<th class="py-space-md px-space-md font-medium">Vendor &amp; Tender Package</th>
+<th class="py-space-md px-space-md font-medium">Document / Category</th>
+<th class="py-space-md px-space-md font-medium">SHA-256 Digest</th>
+<th class="py-space-md px-space-md font-medium">RAM Lifecycle Proof</th>
+<th class="py-space-md px-space-md font-medium">Compliance Decision</th>
+<th class="py-space-md px-space-lg text-right font-medium">Attestation Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<!-- Row 1: Vanguard ElectroTech Solutions (Approved) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-lg align-top">
+<div class="font-mono font-medium text-primary">14:48:19.022</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 font-mono">BLK-1492824</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-medium text-primary">Vanguard ElectroTech Solutions</div>
+<div class="font-label-sm text-label-sm text-secondary">TND-2025-IND-8810 (Defense Radar)</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-secondary">badge</span>
+                  GSTIN &amp; Tax Clearance
+                </div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<code class="font-mono text-xs px-2 py-1 rounded bg-surface-container-low text-primary select-all">9f86d081884...72b9a1</code>
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="copyHash('9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08')" title="Copy Full Hash">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> 6 Multi-page Leaves Valid
+                </span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1 text-on-secondary-fixed-variant font-medium">
+<span class="material-symbols-outlined text-secondary text-[16px]">cleaning_services</span>
+<span>Purged in 680ms</span>
+</div>
+<div class="font-mono text-label-sm text-label-sm text-on-surface-variant mt-0.5">Addr: 0x7FFF08A1 [0x00]</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">verified</span> Approved
+                </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">HSM Signed: #4092-VAULT</div>
+</td>
+<td class="py-space-md px-space-lg align-top text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-colors" onclick="openDrawer('Vanguard ElectroTech Solutions', '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08', 'GSTIN &amp; Tax Clearance', 'Approved', '680ms')">
+                  Inspect Proof
+                </button>
+</td>
+</tr>
+<!-- Row 2: SwiftLogistics Global Ltd (Rejected) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-lg align-top">
+<div class="font-mono font-medium text-primary">14:45:02.118</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 font-mono">BLK-1492822</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-medium text-primary">SwiftLogistics Global Ltd</div>
+<div class="font-label-sm text-label-sm text-secondary">TND-2025-LOG-1109 (Port Haulage)</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-secondary">assignment_late</span>
+                  Trade License &amp; Labor Cess
+                </div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<code class="font-mono text-xs px-2 py-1 rounded bg-surface-container-low text-primary select-all">5e884898da2...809d43</code>
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="copyHash('5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8')" title="Copy Full Hash">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-error mt-1 flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-[12px]">error</span> Revoked Registry Hash Match
+                </span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1 text-on-secondary-fixed-variant font-medium">
+<span class="material-symbols-outlined text-secondary text-[16px]">cleaning_services</span>
+<span>Purged in 710ms</span>
+</div>
+<div class="font-mono text-label-sm text-label-sm text-on-surface-variant mt-0.5">Addr: 0x7FFF19C4 [0x00]</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">cancel</span> Hard Reject
+                </span>
+<div class="font-label-sm text-label-sm text-error mt-1">Expired Dec 2024</div>
+</td>
+<td class="py-space-md px-space-lg align-top text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-colors" onclick="openDrawer('SwiftLogistics Global Ltd', '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8', 'Trade License &amp; Labor Cess', 'Hard Reject', '710ms')">
+                  Inspect Proof
+                </button>
+</td>
+</tr>
+<!-- Row 3: Horizon Heavy Works LLP (Escalated) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-lg align-top">
+<div class="font-mono font-medium text-primary">14:39:44.890</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 font-mono">BLK-1492819</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-medium text-primary">Horizon Heavy Works LLP</div>
+<div class="font-label-sm text-label-sm text-secondary">TND-2025-INFRA-9003 (Highway Paving)</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-secondary">corporate_fare</span>
+                  Corporate Resolution &amp; PAN
+                </div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<code class="font-mono text-xs px-2 py-1 rounded bg-surface-container-low text-primary select-all">4b227777d4d...e76b92</code>
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="copyHash('4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a')" title="Copy Full Hash">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary">shield</span> 2 Signatures Witnessed
+                </span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1 text-on-secondary-fixed-variant font-medium">
+<span class="material-symbols-outlined text-secondary text-[16px]">cleaning_services</span>
+<span>Purged in 820ms</span>
+</div>
+<div class="font-mono text-label-sm text-label-sm text-on-surface-variant mt-0.5">Addr: 0x7FFF4E20 [0x00]</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px] text-secondary">person_search</span> Escalated
+                </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">Entity Name Discrepancy</div>
+</td>
+<td class="py-space-md px-space-lg align-top text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-colors" onclick="openDrawer('Horizon Heavy Works LLP', '4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a', 'Corporate Resolution &amp; PAN', 'Escalated', '820ms')">
+                  Inspect Proof
+                </button>
+</td>
+</tr>
+<!-- Row 4: Apex Buildtech Infra Pvt Ltd (Active / Partial) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-lg align-top">
+<div class="font-mono font-medium text-primary">14:31:12.441</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 font-mono">BLK-1492815</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-medium text-primary">Apex Buildtech Infra Pvt Ltd</div>
+<div class="font-label-sm text-label-sm text-secondary">TND-2025-METRO-0412 (Line 3 Pier)</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-secondary">security</span>
+                  Aadhaar Masked Auth Vault
+                </div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<code class="font-mono text-xs px-2 py-1 rounded bg-surface-container-low text-primary select-all">ef2d127de37...691a0c</code>
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="copyHash('ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d')" title="Copy Full Hash">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">lock</span> UIDAI Masking Attested
+                </span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1 text-on-secondary-fixed-variant font-medium">
+<span class="material-symbols-outlined text-secondary text-[16px]">cleaning_services</span>
+<span>Purged in 640ms</span>
+</div>
+<div class="font-mono text-label-sm text-label-sm text-on-surface-variant mt-0.5">Addr: 0x7FFF92D1 [0x00]</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">verified</span> Approved
+                </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">HSM Signed: #4092-VAULT</div>
+</td>
+<td class="py-space-md px-space-lg align-top text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-colors" onclick="openDrawer('Apex Buildtech Infra Pvt Ltd', 'ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d', 'Aadhaar Masked Auth Vault', 'Approved', '640ms')">
+                  Inspect Proof
+                </button>
+</td>
+</tr>
+<!-- Row 5: BioHealth Pharma Logistics (Approved) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-lg align-top">
+<div class="font-mono font-medium text-primary">14:22:58.309</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 font-mono">BLK-1492810</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-medium text-primary">BioHealth Pharma Logistics</div>
+<div class="font-label-sm text-label-sm text-secondary">TND-2025-MED-3341 (Cold-Chain Vaccine)</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px] text-secondary">medical_services</span>
+                  CDSCO License &amp; WHO-GMP
+                </div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<code class="font-mono text-xs px-2 py-1 rounded bg-surface-container-low text-primary select-all">ca978112ca1...bc1128</code>
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="copyHash('ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb')" title="Copy Full Hash">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> Calibration Cert Cryptosealed
+                </span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1 text-on-secondary-fixed-variant font-medium">
+<span class="material-symbols-outlined text-secondary text-[16px]">cleaning_services</span>
+<span>Purged in 790ms</span>
+</div>
+<div class="font-mono text-label-sm text-label-sm text-on-surface-variant mt-0.5">Addr: 0x7FFF7831 [0x00]</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">verified</span> Approved
+                </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">HSM Signed: #4092-VAULT</div>
+</td>
+<td class="py-space-md px-space-lg align-top text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-colors" onclick="openDrawer('BioHealth Pharma Logistics', 'ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb', 'CDSCO License &amp; WHO-GMP', 'Approved', '790ms')">
+                  Inspect Proof
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="px-space-lg py-space-md bg-surface-container-low/20 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<div>Showing 5 of 14,892 Cryptographic Records (Immutable Merkle Tree Branch #24)</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface disabled:opacity-50" disabled="">Previous</button>
+<span class="px-2 py-1 font-mono text-primary font-semibold">Page 1 / 2,979</span>
+<button class="px-3 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface">Next</button>
+</div>
+</div>
+</div>
+<!-- Dual Proof Visualizer Architecture Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Merkle Tree Architecture Visualizer (7 Cols) -->
+<div class="lg:col-span-7 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">lan</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Merkle Proof Tree Visualizer</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+              Root Verified
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Each leaf encapsulates document OCR hashes, UIDAI privacy masks, and temporal stamps without persistent disk writes.
+          </p>
+<!-- SVG Merkle Graph -->
+<div class="w-full mt-space-md p-space-md rounded-xl bg-surface-container-low/40 flex flex-col items-center justify-center">
+<svg class="w-full max-w-[540px] h-48 overflow-visible" fill="none" viewbox="0 0 540 180" xmlns="http://www.w3.org/2000/svg">
+<!-- Root Node -->
+<rect fill="#162623" height="34" rx="6" width="120" x="210" y="8"></rect>
+<text fill="#ffffff" font-family="Space Grotesk" font-size="10" font-weight="600" text-anchor="middle" x="270" y="25">MERKLE ROOT</text>
+<text fill="#A4CED1" font-family="monospace" font-size="8" text-anchor="middle" x="270" y="36">0x9F41...E9B2</text>
+<!-- Lines from Root to Branch Nodes -->
+<line stroke="#577877" stroke-dasharray="3 3" stroke-width="1.5" x1="240" x2="140" y1="42" y2="76"></line>
+<line stroke="#577877" stroke-dasharray="3 3" stroke-width="1.5" x1="300" x2="400" y1="42" y2="76"></line>
+<!-- Branch Node Left -->
+<rect fill="#3c6568" height="30" rx="6" width="120" x="80" y="76"></rect>
+<text fill="#ffffff" font-family="Space Grotesk" font-size="9" font-weight="600" text-anchor="middle" x="140" y="91">NODE_H(0,1)</text>
+<text fill="#E7F7F0" font-family="monospace" font-size="7" text-anchor="middle" x="140" y="101">0x3A81...44D1</text>
+<!-- Branch Node Right -->
+<rect fill="#3c6568" height="30" rx="6" width="120" x="340" y="76"></rect>
+<text fill="#ffffff" font-family="Space Grotesk" font-size="9" font-weight="600" text-anchor="middle" x="400" y="91">NODE_H(2,3)</text>
+<text fill="#E7F7F0" font-family="monospace" font-size="7" text-anchor="middle" x="400" y="101">0x7B9C...12A0</text>
+<!-- Lines to Leaves -->
+<line stroke="#B8CAC5" stroke-width="1.5" x1="110" x2="60" y1="106" y2="136"></line>
+<line stroke="#B8CAC5" stroke-width="1.5" x1="170" x2="180" y1="106" y2="136"></line>
+<line stroke="#B8CAC5" stroke-width="1.5" x1="370" x2="330" y1="106" y2="136"></line>
+<line stroke="#B8CAC5" stroke-width="1.5" x1="430" x2="460" y1="106" y2="136"></line>
+<!-- Leaf 0: GSTIN -->
+<rect fill="#ffffff" height="30" rx="4" stroke="#c2c8c5" stroke-width="1" width="100" x="10" y="136"></rect>
+<text fill="#171c1e" font-family="Space Grotesk" font-size="8" font-weight="600" text-anchor="middle" x="60" y="149">LEAF: GSTIN</text>
+<text fill="#3c6568" font-family="monospace" font-size="7" text-anchor="middle" x="60" y="159">9f86d...0a08</text>
+<!-- Leaf 1: PAN -->
+<rect fill="#ffffff" height="30" rx="4" stroke="#c2c8c5" stroke-width="1" width="100" x="130" y="136"></rect>
+<text fill="#171c1e" font-family="Space Grotesk" font-size="8" font-weight="600" text-anchor="middle" x="180" y="149">LEAF: PAN</text>
+<text fill="#3c6568" font-family="monospace" font-size="7" text-anchor="middle" x="180" y="159">4b227...bf8a</text>
+<!-- Leaf 2: Aadhaar -->
+<rect fill="#ffffff" height="30" rx="4" stroke="#c2c8c5" stroke-width="1" width="100" x="280" y="136"></rect>
+<text fill="#171c1e" font-family="Space Grotesk" font-size="8" font-weight="600" text-anchor="middle" x="330" y="149">LEAF: AADHAAR</text>
+<text fill="#3c6568" font-family="monospace" font-size="7" text-anchor="middle" x="330" y="159">ef2d1...e39d</text>
+<!-- Leaf 3: License -->
+<rect fill="#ffffff" height="30" rx="4" stroke="#c2c8c5" stroke-width="1" width="100" x="410" y="136"></rect>
+<text fill="#171c1e" font-family="Space Grotesk" font-size="8" font-weight="600" text-anchor="middle" x="460" y="149">LEAF: CDSCO</text>
+<text fill="#3c6568" font-family="monospace" font-size="7" text-anchor="middle" x="460" y="159">ca978...48bb</text>
+</svg>
+</div>
+</div>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Cryptographic Witness: <strong>TenderGuard Zero-Knowledge Verifier 4.2.1</strong></span>
+<span class="font-mono text-secondary">Zero-Leakage Guarantee: PASS</span>
+</div>
+</div>
+<!-- Enclave Purge Timeline & Memory State (5 Cols) -->
+<div class="lg:col-span-5 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">RAM Enclave Lifecycle</h2>
+</div>
+<span class="font-mono text-label-sm text-label-sm text-secondary font-semibold">T_TOTAL = 680ms</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Deterministic ephemeral pipeline ensuring volatile tensors are zeroized before I/O cycle terminates.
+          </p>
+<!-- Stepper Pipeline -->
+<div class="mt-space-md flex flex-col gap-3 relative">
+<!-- Step 1 -->
+<div class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low/50">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-semibold shrink-0">1</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">RAM Allocation</span>
+<span class="font-mono text-label-sm text-label-sm text-secondary">0 - 110ms</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-xs">Mounted in secure RAMFS enclave (0x7FFF08A1), encrypted in flight.</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low/50">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-semibold shrink-0">2</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Tensor Inference &amp; OCR</span>
+<span class="font-mono text-label-sm text-label-sm text-secondary">110 - 580ms</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-xs">Aadhaar masking &amp; GSTIN cross-checks executed in volatile CPU registers.</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low/50">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-semibold shrink-0">3</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">SHA-256 Digest Sealing</span>
+<span class="font-mono text-label-sm text-label-sm text-secondary">580 - 640ms</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant text-xs">Cryptographic digest minted and written into immutable ledger leaf node.</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-start gap-3 p-2.5 rounded-lg bg-secondary-container/30">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-mono text-xs font-semibold shrink-0">4</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-secondary-fixed-variant font-bold">Memory Zeroization Purge</span>
+<span class="font-mono text-label-sm text-label-sm text-secondary font-bold">640 - 680ms</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-secondary-fixed-variant text-xs">DDR5 cells overwritten with 0x00 pattern. Verified residual voltage: Null.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between font-label-sm text-label-sm text-secondary font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Zero Disk Leaks</span>
+<span class="font-mono">FIPS 140-3 Purge Cert #811</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide-Over Drawer / Cryptographic Inspector Modal Backdrop -->
+<div class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm hidden flex justify-end transition-opacity" id="inspectorDrawer">
+<div class="w-full max-w-2xl bg-surface h-full shadow-2xl p-space-lg flex flex-col justify-between overflow-y-auto">
+<div>
+<!-- Drawer Header -->
+<div class="flex items-center justify-between pb-space-md border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="p-2 rounded-lg bg-secondary-container text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Cryptographic Attestation Receipt</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-mono">ENCLAVE WITNESS CERTIFICATE v4.2</p>
+</div>
+</div>
+<button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="closeDrawer()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Dynamic Content Body -->
+<div class="mt-space-lg flex flex-col gap-space-md">
+<!-- Entity Detail Box -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Audited Entity</span>
+<div class="font-headline-sm text-headline-sm text-primary font-semibold" id="drawerVendor">Vanguard ElectroTech Solutions</div>
+<div class="font-label-md text-label-md text-secondary" id="drawerCategory">GSTIN &amp; Tax Clearance</div>
+</div>
+<!-- Cryptographic Digest & Proof Hash -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SHA-256 Memory Root Fingerprint</span>
+<div class="p-2.5 rounded bg-surface-container-low font-mono text-xs text-primary break-all" id="drawerHash">
+              9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08
+            </div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Merkle Proof Index: Leaf #1,492,824-A</span>
+<span class="text-secondary font-medium">Status: Mathematically Verified</span>
+</div>
+</div>
+<!-- Zeroization Hardware Receipt -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Hardware Zeroization Execution</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">Purged</span>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1 font-body-sm text-body-sm">
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-on-surface-variant block text-xs">Purge Duration:</span>
+<span class="font-mono text-primary font-semibold" id="drawerPurgeTime">680ms</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-on-surface-variant block text-xs">Disk Write Counter:</span>
+<span class="font-mono text-secondary font-semibold">0.00 bytes</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-on-surface-variant block text-xs">RAM Physical Range:</span>
+<span class="font-mono text-primary font-semibold">0x7FFF08A1-0x7FFF10B0</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low">
+<span class="text-on-surface-variant block text-xs">Post-Wipe Pattern:</span>
+<span class="font-mono text-secondary font-semibold">0x00000000 (Null)</span>
+</div>
+</div>
+</div>
+<!-- JSON-LD Preview Token -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Verifiable JSON-LD Token</span>
+<button class="text-xs text-secondary hover:text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1" onclick="copyJsonSnippet()">
+<span class="material-symbols-outlined text-[14px]">copy_all</span> Copy JSON-LD
+              </button>
+</div>
+<pre class="p-3 rounded-lg bg-primary-container text-primary-fixed font-mono text-[11px] leading-relaxed overflow-x-auto max-h-40"><code>{
+  "@context": "https://w3id.org/security/v3",
+  "type": "ZeroDiskAttestationReceipt",
+  "issuer": "urn:tenderguard:enclave:node-sgx-01",
+  "issuanceDate": "2025-05-18T14:48:19Z",
+  "claim": {
+    "zeroStorageVerification": true,
+    "memoryPurgeIntervalMs": 680,
+    "sha256Digest": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+    "fipsLevel": "FIPS 140-3 Level 4"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "verificationMethod": "did:tenderguard:4092-HSM#key-1",
+    "jws": "eyJhbGciOiJFZERTQ..."
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="pt-space-md border-t border-surface-container-high flex items-center justify-between gap-space-sm">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" onclick="closeDrawer()">
+          Dismiss
+        </button>
+<button class="flex items-center gap-2 px-space-md py-space-sm rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Download Signed Proof (.sig)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Inline Micro-interactions Script -->
+<script>
+    function openDrawer(vendor, hash, cat, decision, purgeTime) {
+      document.getElementById('drawerVendor').innerText = vendor;
+      document.getElementById('drawerCategory').innerText = cat;
+      document.getElementById('drawerHash').innerText = hash;
+      document.getElementById('drawerPurgeTime').innerText = purgeTime;
+      document.getElementById('inspectorDrawer').classList.remove('hidden');
+    }
+
+    function closeDrawer() {
+      document.getElementById('inspectorDrawer').classList.add('hidden');
+    }
+
+    function copyHash(hash) {
+      navigator.clipboard.writeText(hash);
+      const toast = document.getElementById('verifySuccessBadge');
+      toast.classList.remove('hidden');
+      toast.querySelector('span strong').innerText = 'Hash Copied to Clipboard: ';
+    }
+
+    function copyJsonSnippet() {
+      const code = document.querySelector('pre code').innerText;
+      navigator.clipboard.writeText(code);
+      alert('Cryptographic JSON-LD attestation payload copied.');
+    }
+
+    function triggerQuickVerify() {
+      const input = document.getElementById('hashSearchInput').value.trim();
+      const toast = document.getElementById('verifySuccessBadge');
+      toast.classList.remove('hidden');
+      if (input.length > 0) {
+        toast.querySelector('span strong').innerText = 'Merkle Proof Found for Query: ';
+      } else {
+        toast.querySelector('span strong').innerText = 'Merkle Proof Confirmed: ';
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest mt-space-xl py-space-lg shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div>© 2025 TenderGuard AI. Autonomous Compliance &amp; Cryptographic RAM Verification Hub.</div><div class="flex items-center gap-space-lg font-label-sm text-label-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Cryptographic Audit Attestation</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="security-protocols" href="#">Zero-Knowledge Principles</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">RAM Isolation Specs</a></div></div></footer></body></html>

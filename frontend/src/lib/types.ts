@@ -1,6 +1,109 @@
 export type ComplianceStatus = 'COMPLIANT' | 'NON_COMPLIANT' | 'REQUIRES_REVIEW';
 export type SeverityLevel = 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW';
 
+// ==========================================
+// Phase 1: Core Vendor & Audit Enums & Types
+// ==========================================
+
+export enum VendorCategory {
+  CONSTRUCTION = 'CONSTRUCTION',
+  ELECTRONICS = 'ELECTRONICS',
+  LOGISTICS = 'LOGISTICS',
+}
+
+export enum ApplicationStatus {
+  PENDING = 'PENDING',
+  APPROVED = 'APPROVED',
+  REJECTED = 'REJECTED',
+  EDGE_CASE_HUMAN_REVIEW = 'EDGE_CASE_HUMAN_REVIEW',
+}
+
+export enum AuditStatus {
+  VERIFIED = 'VERIFIED',
+  REJECTED = 'REJECTED',
+  EDGE_CASE = 'EDGE_CASE',
+}
+
+export type DocumentType =
+  // Universal Base
+  | 'PAN'
+  | 'AADHAAR'
+  | 'GST'
+  // Construction
+  | 'PWD_LICENSE'
+  | 'SAFETY_CERT'
+  | 'WORKMEN_COMP'
+  // Electronics
+  | 'BIS_CERT'
+  | 'ROHS_E_WASTE'
+  | 'ISO_9001'
+  // Logistics
+  | 'SHOP_ESTABLISHMENT'
+  | 'FLEET_FITNESS'
+  | 'CARRIER_PERMIT';
+
+export interface VendorProfile {
+  id: string;
+  phoneNumber: string;
+  companyName: string | null;
+  category: VendorCategory | null;
+  applicationStatus: ApplicationStatus;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface DocumentAuditLogItem {
+  id: string;
+  vendorId: string;
+  docType: DocumentType | string;
+  sha256Hash: string;
+  status: AuditStatus | string;
+  expiryDate: string | null;
+  confidenceScore: number;
+  aiRemarks: string;
+  verifiedAt: string;
+}
+
+export interface VendorSession {
+  vendorId: string;
+  phoneNumber: string;
+  companyName: string | null;
+  category: VendorCategory | null;
+  applicationStatus: ApplicationStatus;
+}
+
+export interface ChecklistDocumentConfig {
+  docType: DocumentType;
+  title: string;
+  description: string;
+  stepNumber: number;
+  isUniversal: boolean;
+  category?: VendorCategory;
+  requiredFor: string;
+  authorityOrForm: string;
+  acceptedFormats: string[];
+  maxSizeMB: number;
+  validationRules: string[];
+  ruleId?: string;
+  targetPattern?: string;
+}
+
+export interface SequentialStepProgress {
+  stepNumber: number;
+  docType: DocumentType;
+  title: string;
+  description: string;
+  isUnlocked: boolean;
+  isCurrent: boolean;
+  isCompleted: boolean;
+  status: 'LOCKED' | 'UNLOCKED' | 'VERIFIED' | 'REJECTED' | 'EDGE_CASE';
+  auditLog?: DocumentAuditLogItem;
+}
+
+// ==========================================
+// Explainable AI & Evidence Traces
+// ==========================================
+
 export interface BoundingBox {
   ymin: number;
   xmin: number;
@@ -9,15 +112,22 @@ export interface BoundingBox {
 }
 
 export interface VisualEvidence {
-  field_name: string;
-  extracted_value: string | number | boolean | null;
+  field_name?: string;
+  extracted_value?: string | number | boolean | null;
+  value?: string | number | boolean | null;
   confidence: number;
-  page_number: number;
-  bounding_box: BoundingBox;
-  source_doc_name: string;
-  doc_type: string;
+  page_number?: number;
+  bounding_box?: BoundingBox;
+  source_doc_name?: string;
+  doc_type?: string;
   context_snippet?: string;
   crop_image_url?: string;
+  label?: string;
+  x?: number;
+  y?: number;
+  width?: number;
+  height?: number;
+  color?: string;
 }
 
 export interface ComplianceCheckItem {

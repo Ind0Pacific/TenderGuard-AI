@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-highest": "#dee3e5", "on-secondary-fixed-variant": "#244d50", "secondary-fixed-dim": "#a4ced1", "on-tertiary-container": "#6f918f", "error": "#ba1a1a", "on-primary": "#ffffff", "secondary": "#3c6568", "tertiary-fixed": "#c6e9e8", "secondary-fixed": "#bfeaee", "on-primary-container": "#7c8e8a", "primary-container": "#162623", "primary": "#02100d", "primary-fixed-dim": "#b8cac5", "background": "#f5fafc", "outline": "#727876", "on-surface-variant": "#424846", "surface-container-high": "#e4e9eb", "on-surface": "#171c1e", "on-background": "#171c1e", "on-error-container": "#93000a", "primary-fixed": "#d4e6e1", "tertiary": "#001010", "on-tertiary-fixed": "#00201f", "on-primary-fixed": "#0e1e1c", "surface-container": "#eaeff1", "surface": "#f5fafc", "surface-tint": "#51625e", "secondary-container": "#bfeaee", "on-tertiary-fixed-variant": "#2c4c4b", "on-primary-fixed-variant": "#3a4a46", "tertiary-fixed-dim": "#aacdcc", "on-secondary": "#ffffff", "on-secondary-fixed": "#002022", "surface-container-low": "#eff4f6", "on-error": "#ffffff", "outline-variant": "#c2c8c5", "inverse-primary": "#b8cac5", "inverse-surface": "#2c3133", "on-secondary-container": "#436b6e", "surface-container-lowest": "#ffffff", "on-tertiary": "#ffffff", "tertiary-container": "#032827", "surface-dim": "#d6dbdd", "surface-variant": "#dee3e5", "inverse-on-surface": "#ecf1f3", "surface-bright": "#f5fafc", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "margin": "2.5rem", "margin-sm": "1.25rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "gutter": "1.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-md": ["Manrope"], "body-lg": ["Manrope"], "headline-xl-mobile": ["Manrope"], "body-sm": ["Manrope"], "headline-xl": ["Manrope"], "label-lg": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "headline-sm": ["Manrope"], "display-lg": ["Manrope"], "display-lg-mobile": ["Manrope"], "label-md": ["Space Grotesk"], "body-md": ["Manrope"] }, "fontSize": { "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="TenderGuard AI Shield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UIL6dyGJMDCLXOgBaBSnMGq4k4RnnGC6p_BbdBKu1vK4KmiqqwGD5nrdTYDR7KIM0H2XMempb9l-PMdeLmypQH6krbY7z_qtOgxGUoU-5vy-thXR9-04PdcJ-UyS48FESnzrdjLKS0hgzwbIYxZcdUyLmdPH2G76URDnQHRV8Fe4uVgdZVGaOkxhzM1cTAINDo3Q21gL9pCxDgUo6HjWMDp8FmadU9G1fayEdtdxjE3IY0KPuOrdk2fK4"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary">TenderGuard AI</span></div><span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Zero-Storage RAM Security</span><div class="hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>Ephemeral RAM Session: Active</div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg shadow-sm"><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="upload-and-scan" href="#">Upload &amp; Ingest</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="audit-and-compliance" href="#">Audit &amp; Compliance</a><a class="px-space-md py-space-sm text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="ram-and-hash-audit-logs" href="#">RAM &amp; Hash Audit Logs</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex flex-col items-end"><span class="font-label-md text-label-md font-semibold text-on-surface">Auditor #4092</span><span class="font-label-sm text-label-sm text-secondary font-medium">SHA-256 Hash Mode</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-8 w-full bg-surface-container-low px-margin flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[16px]">shield</span><span>Privacy Shield Active: Zero Document Disk Persistence. All files processed purely in volatile RAM and purged post-hashing.</span></div><div class="hidden md:flex items-center gap-space-md"><span class="font-medium text-secondary">RAM Buffer Integrity: 100% Isolated</span><span class="text-outline">|</span><span>Enclave SHA-256 Verifier v4.2.1</span></div></div></header><main class="w-full pt-28 bg-background"><div class="flex flex-col w-full">
+<!-- Top Command & Vendor Dossier Bar -->
+<section class="w-full px-margin py-space-md">
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg">
+<!-- Vendor Identification & Meta -->
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[32px]">apartment</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">Apex Buildtech Infra Pvt Ltd</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold">Tender Ref #TG-2025-IND-8810</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">GeM Category 1A</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">engineering</span>Civil Infrastructure &amp; Highways</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>Mumbai, Maharashtra</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">currency_rupee</span>Bid Value: ₹142.50 Cr</span>
+</div>
+</div>
+</div>
+<!-- Statutory Compliance Scorecard -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-lg self-stretch lg:self-auto justify-end">
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-12 h-12 -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-secondary" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="18.84" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<span class="absolute font-label-md text-label-md font-bold text-primary">85%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Statutory Readiness</span>
+<span class="font-headline-sm text-headline-sm text-primary leading-none mt-0.5">4 of 5 Cleared</span>
+</div>
+</div>
+<div class="flex flex-col border-l-0 sm:pl-0">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Stage II: Pre-Qualification</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Audit Protocol: GFR 2017 &amp; CPPP 2024</span>
+</div>
+</div>
+</div>
+<!-- Quick Filter Pills -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mt-space-lg pt-space-md bg-surface-container-low/50 px-space-md py-space-sm rounded-xl">
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold shadow-sm transition-all">All Criteria (5)</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-all">Tax &amp; Fiscal (2)</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-all">Statutory Licenses (1)</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-all">Identity Vault (1)</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-all">Debarment Lists (1)</button>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Zero-Disk RAM Enforcement Active</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Split Architecture: Verification Engine (Left) & Statutory Intelligence Inspector (Right) -->
+<section class="w-full px-margin pb-space-lg">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Verification Table & Rule Enforcement (Col 8) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm pb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Mandatory Statutory Criteria Checklist</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Real-time cross-validation across Central Ministry APIs and Verified Procurement Registers</p>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase font-semibold">Live Pipeline Verified</span>
+</div>
+<!-- Criteria Cards / Items -->
+<div class="flex flex-col gap-space-md mt-space-md">
+<!-- Item 1: PAN -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Permanent Account Number (PAN) Record</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">AAACB8192E</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Validated directly against Income Tax Department MCA master registry. Perpetual validity status confirmed; Entity structure matches Certificate of Incorporation.</p>
+<div class="flex flex-wrap items-center gap-space-md mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">task_alt</span>MCA Master Match: 100%</span>
+<span>•</span>
+<span>GFR 2017 Rule 144(xi): Compliant</span>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>APPROVED</span>
+</div>
+</div>
+</div>
+<!-- Item 2: GSTIN -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-lg text-label-lg text-primary font-semibold">GSTIN 3B Return Health &amp; Compliance</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">27AAACB8192E1ZG</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Active status in Maharashtra state tax jurisdiction. Regular 24-month GSTR-1 and GSTR-3B filing timeline verified without default surcharges.</p>
+<div class="flex flex-wrap items-center gap-space-md mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">history</span>24-Mo Return Track: Pristine</span>
+<span>•</span>
+<span>Tax Arrears: Zero Outstanding</span>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>APPROVED</span>
+</div>
+</div>
+</div>
+<!-- Item 3: UIDAI Aadhaar Vault -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-lg text-label-lg text-primary font-semibold">UIDAI Tokenized Identity Vault</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auth Signatory: Rajesh V. Sharma (MD)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Principal Officer identity matched against MCA DIN registry. Tokenized Aadhaar vault confirmed zero plain-text storage; Redaction &amp; masking attestation verified.</p>
+<div class="flex flex-wrap items-center gap-space-md mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">lock</span>SHA-256 Token Vault Passed</span>
+<span>•</span>
+<span>Biometric Integrity: Level 4 HSM</span>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>APPROVED</span>
+</div>
+</div>
+</div>
+<!-- Item 4: Class 1 PWD License -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Class 1 PWD Civil Contractor License</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">PWD-MH-CL1-99201</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Issued by Maharashtra State Public Works Department. Valid until 31-Mar-2027. Solvency limit certified up to ₹250.00 Cr, exceeding the tender threshold (&gt;₹100 Cr).</p>
+<div class="flex flex-wrap items-center gap-space-md mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">verified</span>Capacity Check: ₹250 Cr Solvency</span>
+<span>•</span>
+<span>Expiry Horizon: 742 Days Left</span>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>APPROVED</span>
+</div>
+</div>
+</div>
+<!-- Item 5: CPCB Clearance & Labor Cess (FLAGGED) -->
+<div class="p-space-md rounded-xl bg-surface-container-highest/60 hover:bg-surface-container-highest transition-all">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Pollution Control (CPCB) Clearance &amp; Labor Cess</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">CPCB-ENV-W-8812</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Discrepancy detected in statutory certificate nomenclature: Document states 'Apex Infrastructure Services' (Sole Proprietorship) instead of 'Apex Buildtech Infra Pvt Ltd'. Manual verification required under GeM GTC Clause 4.2.</p>
+<div class="flex flex-wrap items-center gap-space-md mt-2 font-label-sm text-label-sm text-on-surface">
+<span class="flex items-center gap-1 text-primary font-medium"><span class="material-symbols-outlined text-[14px]">info</span>Entity Mismatch Flag</span>
+<span>•</span>
+<span>Escalated to: Senior Legal Officer</span>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span>HUMAN REVIEW</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Cross-Verification Telemetry Stream -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Cryptographic Verification Timeline</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Timestamp: 2025-05-14T11:24:08Z</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Step 01 / Ingestion</span>
+<p class="font-label-lg text-label-lg font-semibold text-primary mt-1">Zero-Disk RAM Decryption</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Tender PDF bundle ingested into protected memory enclave. No temporary write to NVMe.</p>
+</div>
+<div class="mt-space-md flex items-center gap-1 font-label-sm text-label-sm text-secondary font-mono">
+<span class="material-symbols-outlined text-[14px]">memory</span>
+<span>Volatile Buffer: 0x8F94...B02</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Step 02 / Attestation</span>
+<p class="font-label-lg text-label-lg font-semibold text-primary mt-1">SHA-256 Digest Extraction</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Every statutory page parsed for structural digital watermarks and signature stamps.</p>
+</div>
+<div class="mt-space-md flex items-center gap-1 font-label-sm text-label-sm text-secondary font-mono">
+<span class="material-symbols-outlined text-[14px]">shield_lock</span>
+<span>Digest: 80e7d9...21a3</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Step 03 / Purge</span>
+<p class="font-label-lg text-label-lg font-semibold text-primary mt-1">Memory Purge &amp; Token Commit</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">RAM buffers securely overwritten with cryptographic zero-bytes after compliance hashing.</p>
+</div>
+<div class="mt-space-md flex items-center gap-1 font-label-sm text-label-sm text-secondary font-mono">
+<span class="material-symbols-outlined text-[14px]">auto_delete</span>
+<span>Purge Attested: Verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Statutory Intelligence Inspector (Col 4) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Live API Checker Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Live Cross-Referencing</h3>
+<span class="flex items-center gap-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              Connected
+            </span>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">cloud_done</span>
+<span class="font-label-md text-label-md text-primary font-medium">CPPP Tender Portal</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">14ms • OK</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">cloud_done</span>
+<span class="font-label-md text-label-md text-primary font-medium">MCA Company Master (V3)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">32ms • OK</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">cloud_done</span>
+<span class="font-label-md text-label-md text-primary font-medium">National Debarment Registry</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">19ms • OK</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">cloud_done</span>
+<span class="font-label-md text-label-md text-primary font-medium">GeM 4.0 Vendor Database</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">28ms • OK</span>
+</div>
+</div>
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-high/60">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Autonomous Debarment Watch</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[20px] text-secondary">gpp_good</span>
+<span class="font-label-lg text-label-lg font-semibold text-primary">0 Adverse Vigilance Records</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">No blacklisting flags under CVC (Central Vigilance Commission) or World Bank Debarment Lists for the past 7 fiscal years.</p>
+</div>
+</div>
+<!-- Autonomous Expiry Horizon Engine -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Validity Horizon Engine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">GFR Rule 170 mandatory +90 day buffer validation during bid validity period.</p>
+<div class="flex flex-col gap-space-md mt-space-md">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface mb-1">
+<span class="font-semibold">Bid Validity Expiry: 12-Nov-2025</span>
+<span class="text-secondary font-bold">+182 Days Cushion</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">event_available</span>
+<span>All mandatory credentials remain unexpired throughout the mandatory evaluation window.</span>
+</div>
+</div>
+</div>
+<!-- Compliance Context Visual Graphic -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Government Procurement Benchmark</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary mt-1">Standard Reference Enclave</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Statutory verification conducted under strict compliance with Ministry of Finance guidelines.</p>
+<div class="mt-space-md h-36 rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="High tech digital architectural drawing and abstract geometric grid of Indian government procurement infrastructure, architectural symmetry in deep forest spruce and misty sage tones with illuminated glass surfaces and crystalline security shields, photographic quality, architectural style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt4PGDUAGO28DxeQ4DDGpeW6FQSeV7r7GQ--hdLq7ytiQLk3YpwDFsFj8DPgTQ8AYdoXaXKpVG-nz5GfAar-MR3d-wvTTaN4vsJX8MwkoxePahbGNL_kBKcmgBe8AVgkejumokvsE9R6-PEO1prdWAYI97cdtiC3xT7vBZdMtfWPOVUirCXGaL9URHssKwDUx1PVYqTb9oT7OU12q11mKxsol5yLOZyv9oCcE7QUo-jv7sdjgZu8y4"/>
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[1px] flex items-end p-space-sm">
+<span class="font-label-sm text-label-sm text-on-primary bg-primary/70 px-2.5 py-1 rounded-md backdrop-blur-md">GeM GFR 2017 Audit Pipeline Certified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tri-Outcome Benchmark Dossier Showcase -->
+<section class="w-full px-margin pb-space-lg">
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm pb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Historical Decision Benchmarks &amp; Prior Precedents</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Tri-outcome automated classification patterns trained on standard CPPP legal precedents</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Model: TenderGuard Shield v4.9 Legal Core</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg mt-space-md">
+<!-- Case 1: Approved -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm font-semibold">100% COMPLIANT</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Vanguard ElectroTech</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Electronics Tender • B-9821</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">All 6 statutory criteria cleared with unblemished registry cross-match. Instant cryptographic gate pass generated and sealed without human intervention.</p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-high/40 rounded-lg p-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Automated Gate Pass Issued</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+</div>
+</div>
+<!-- Case 2: Hard Reject -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">HARD REJECT (32%)</span>
+<span class="material-symbols-outlined text-primary text-[20px]">cancel</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">SwiftLogistics Global Ltd</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fleet Logistics • L-4102</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">Revoked GSTIN status detected in state registry coupled with an expired interstate labor compliance certificate. Hard stop tripwire triggered automatically.</p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-high/40 rounded-lg p-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Disqualified at Threshold</span>
+<span class="material-symbols-outlined text-[16px] text-primary">block</span>
+</div>
+</div>
+<!-- Case 3: Flagged for Human -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">LEGAL ESCALATION</span>
+<span class="material-symbols-outlined text-primary text-[20px]">rule</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Horizon Heavy Works LLP</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bridge Construction • H-7731</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">Corporate restructuring occurred during the tender submittal window. Entity conversion requires specialized legal committee review under GFR 144.</p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-high/40 rounded-lg p-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Dispatched to Legal Panel</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Auditor Finalization Action Bar -->
+<section class="w-full px-margin pb-space-xl">
+<div class="w-full bg-primary-container text-on-primary rounded-xl p-space-lg shadow-md flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center shrink-0 text-on-secondary">
+<span class="material-symbols-outlined text-[28px]">approval_delegation</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-primary">Auditor Attestation Actions</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/20 text-on-primary font-label-sm text-label-sm font-mono">Dossier #TG-8810</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-0.5">Four mandatory checks approved. One pending nomenclature escalation. Choose final disposition.</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm w-full lg:w-auto justify-end">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-on-primary font-label-md text-label-md transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export Verifiable Manifest</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-highest text-primary hover:bg-surface-bright font-label-md text-label-md transition-all flex items-center gap-1.5 font-semibold">
+<span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+<span>Dispatch Escalation Ticket</span>
+</button>
+<button class="px-space-lg py-2.5 rounded-lg bg-secondary hover:bg-secondary/90 text-on-secondary font-label-md text-label-md transition-all flex items-center gap-2 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-[20px]">encrypted</span>
+<span>Affix Cryptographic Seal</span>
+</button>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest mt-space-xl py-space-lg shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div>© 2025 TenderGuard AI. Autonomous Compliance &amp; Cryptographic RAM Verification Hub.</div><div class="flex items-center gap-space-lg font-label-sm text-label-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Cryptographic Audit Attestation</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="security-protocols" href="#">Zero-Knowledge Principles</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">RAM Isolation Specs</a></div></div></footer></body></html>

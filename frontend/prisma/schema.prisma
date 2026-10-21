@@ -1,0 +1,53 @@
+// TenderGuard AI - Prisma Schema
+// Enforces Zero Document Retention: Only cryptographic SHA-256 digests and audit metadata are stored.
+// NO raw files, NO blobs, NO S3/Cloud storage URLs, and NO raw Aadhaar/PAN digits.
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Vendor {
+  id                String             @id @default(cuid())
+  phoneNumber       String             @unique
+  companyName       String?
+  category          String?            // ENUM: CONSTRUCTION, ELECTRONICS, LOGISTICS
+  applicationStatus String             @default("PENDING") // ENUM: PENDING, APPROVED, REJECTED, EDGE_CASE_HUMAN_REVIEW
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+  auditLogs         DocumentAuditLog[]
+
+  @@map("vendors")
+}
+
+model DocumentAuditLog {
+  id              String    @id @default(cuid())
+  vendorId        String
+  docType         String    // e.g., PAN, AADHAAR, GST, PWD_LICENSE, SAFETY_CERT, ISO_9001, etc.
+  sha256Hash      String    // Cryptographic SHA-256 digest (Zero Document Storage rule)
+  status          String    // ENUM: VERIFIED, REJECTED, EDGE_CASE
+  expiryDate      DateTime?
+  confidenceScore Float
+  aiRemarks       String
+  verifiedAt      DateTime  @default(now())
+  vendor          Vendor    @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+
+  @@index([sha256Hash])
+  @@index([vendorId])
+  @@map("document_audit_logs")
+}
+
+model OtpVerification {
+  id          String   @id @default(cuid())
+  phoneNumber String   @unique
+  otpCode     String
+  expiresAt   DateTime
+  attempts    Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  @@map("otp_verifications")
+}
