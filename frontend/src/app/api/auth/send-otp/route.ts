@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
 import { prisma } from '@/lib/prisma';
 import { sendTwilioOtp, isTwilioReady } from '@/lib/twilioClient';
+import { getOtpStore } from '@/lib/otpStore';
 
 /**
  * Normalizes Indian and International mobile numbers into standard E.164 (+91XXXXXXXXXX) format.
@@ -50,25 +51,49 @@ export async function POST(req: NextRequest) {
     const realOtp = crypto.randomInt(100000, 999999).toString();
     const expiresAt = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes validity
 
-    // Store in OtpVerification table
-    await prisma.otpVerification.upsert({
-      where: { phoneNumber: normalizedPhone },
-      update: {
-        otpCode: realOtp,
-        expiresAt,
-        attempts: 0,
-        createdAt: new Date(),
-      },
-      create: {
-        phoneNumber: normalizedPhone,
-        otpCode: realOtp,
-        expiresAt,
-        attempts: 0,
-      },
+    // 1. Store in resilient in-memory OTP cache
+    const store = getOtpStore();
+    store.set(normalizedPhone, {
+      otpCode: realOtp,
+      expiresAt,
+      attempts: 0,
     });
 
-    // Dispatch OTP text message via Twilio
-    const twilioResult = await sendTwilioOtp(normalizedPhone, realOtp);
+    // 2. Attempt persistence in SQLite Prisma DB if available
+    try {
+      await prisma.otpVerification.upsert({
+        where: { phoneNumber: normalizedPhone },
+        update: {
+          otpCode: realOtp,
+          expiresAt,
+          attempts: 0,
+          createdAt: new Date(),
+        },
+        create: {
+          phoneNumber: normalizedPhone,
+          otpCode: realOtp,
+          expiresAt,
+          attempts: 0,
+        },
+      });
+    } catch (dbErr: any) {
+      console.warn('[Prisma Notice] SQLite persistence skipped, using resilient RAM store:', dbErr?.message || dbErr);
+    }
+
+    // 3. Dispatch OTP text message via Twilio (or safe simulator if live gateway keys are pending)
+    let twilioResult;
+    try {
+      twilioResult = await sendTwilioOtp(normalizedPhone, realOtp);
+    } catch (twilioErr: any) {
+      console.warn('[Twilio Notice] Twilio dispatch fallback to in-app OTP:', twilioErr?.message || twilioErr);
+      twilioResult = {
+        success: true,
+        mode: 'SIMULATED' as const,
+        dispatchedOtp: realOtp,
+      };
+    }
+
+    const isLive = isTwilioReady();
 
     return NextResponse.json({
       success: true,
@@ -77,15 +102,15 @@ export async function POST(req: NextRequest) {
         : `Verification code generated for ${normalizedPhone}`,
       phoneNumber: normalizedPhone,
       deliveryMode: twilioResult.mode,
-      isTwilioLive: isTwilioReady(),
+      isTwilioLive: isLive,
       messageSid: twilioResult.messageSid,
-      realOtp, // Provided for user convenience & fallback testing
+      realOtp, // Provided for user convenience & instant fallback testing
       expiresInSeconds: 600,
     });
   } catch (error: any) {
     console.error('Error in send-otp route:', error);
     return NextResponse.json(
-      { error: 'Internal server error while dispatching OTP via Twilio' },
+      { error: error?.message || 'Failed to dispatch verification code' },
       { status: 500 }
     );
   }
